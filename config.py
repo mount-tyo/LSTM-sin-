@@ -4,7 +4,7 @@ N = 800
 # テストデータ数　
 Nte = 200
 # バッチサイズ 
-bss = [40,20,10,5]
+# bss = [40,20,10,5]
 # bss = [40]
 # 学習回数
 n_epoch = 1000  
@@ -14,6 +14,11 @@ h_unitss = [[5,5],[9,9],[11,11],[20,20]]
 #h_unitss = [[10, 10], [5, 5]]
 # 活性化関数 (ReLU関数='relu', sigmoid関数='sig')
 acts = ['sig', 'relu']
+
+# LSTMの隠れ層ベクトルのサイズ
+hidden_size = 5
+# LSTMのバッチサイズ
+batch_size = 20
 
 # 出力画像のファイルパス
 # save_path = './Result/'

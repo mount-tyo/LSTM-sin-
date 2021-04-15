@@ -9,4 +9,5 @@ if __name__ == "__main__":
             for act in acts:
                 train.training(N, Nte, bs, n_epoch, h_units, act)
     '''
-    train.training(N, Nte, 20, 1000, [11,11], 'sig')
+    # train.training(N, Nte, 20, 1000, [11,11], 'sig')
+    train.training(N, Nte, 10, 400)

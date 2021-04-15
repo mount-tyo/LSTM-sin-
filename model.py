@@ -34,7 +34,6 @@ class LSTM_NN(nn.Module):
         '''
         self.output_layer = nn.Linear(hiddenDim, outputDim)
 
-    
     def forward(self, inputs, hidden0=None):
         '''
         inputs  : 時系列データ全体
@@ -53,8 +52,14 @@ class LSTM_NN(nn.Module):
         output[:, -1, :]  :  時系列の最後の値(ベクトル)を参照している
                              output_layer()に入れることで、サイズ１のベクトルに変換される
         '''
-
         return output
+
+    def predict(self, x):
+        x = T.tensor(x)
+        y = self.forward(x)
+        # print(y)
+        
+        return y.data
     
 
 
